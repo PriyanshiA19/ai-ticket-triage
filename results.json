@@ -1,0 +1,233 @@
+{
+  "n_total": 5397,
+  "n_train": 4317,
+  "n_test": 1080,
+  "class_counts_category": {
+    "billing": 1380,
+    "product": 1368,
+    "technical": 1327,
+    "account": 1322
+  },
+  "class_counts_urgency": {
+    "medium": 2371,
+    "low": 1623,
+    "high": 1403
+  },
+  "cv_table": {
+    "category": {
+      "Linear SVM": 0.9726,
+      "Logistic Regression": 0.9678,
+      "Naive Bayes": 0.9239
+    },
+    "urgency": {
+      "Linear SVM": 0.7415,
+      "Logistic Regression": 0.739,
+      "Naive Bayes": 0.7439
+    }
+  },
+  "metrics": {
+    "category": {
+      "accuracy": 0.9722222222222222,
+      "macro_f1": 0.972216253972612,
+      "weighted_f1": 0.9722104375270011,
+      "report": {
+        "billing": {
+          "precision": 0.9708029197080292,
+          "recall": 0.9637681159420289,
+          "f1-score": 0.9672727272727273,
+          "support": 276.0
+        },
+        "technical": {
+          "precision": 0.9810606060606061,
+          "recall": 0.9736842105263158,
+          "f1-score": 0.9773584905660377,
+          "support": 266.0
+        },
+        "account": {
+          "precision": 0.9695817490494296,
+          "recall": 0.9659090909090909,
+          "f1-score": 0.967741935483871,
+          "support": 264.0
+        },
+        "product": {
+          "precision": 0.967741935483871,
+          "recall": 0.9854014598540146,
+          "f1-score": 0.976491862567812,
+          "support": 274.0
+        },
+        "accuracy": 0.9722222222222222,
+        "macro avg": {
+          "precision": 0.9722968025754839,
+          "recall": 0.9721907193078625,
+          "f1-score": 0.972216253972612,
+          "support": 1080.0
+        },
+        "weighted avg": {
+          "precision": 0.9722542584473773,
+          "recall": 0.9722222222222222,
+          "f1-score": 0.9722104375270011,
+          "support": 1080.0
+        }
+      }
+    },
+    "urgency": {
+      "accuracy": 0.7518518518518519,
+      "macro_f1": 0.7434262330318488,
+      "weighted_f1": 0.755336237591279,
+      "report": {
+        "low": {
+          "precision": 0.7648725212464589,
+          "recall": 0.7780979827089337,
+          "f1-score": 0.7714285714285715,
+          "support": 347.0
+        },
+        "medium": {
+          "precision": 0.8543689320388349,
+          "recall": 0.7302904564315352,
+          "f1-score": 0.7874720357941835,
+          "support": 482.0
+        },
+        "high": {
+          "precision": 0.6031746031746031,
+          "recall": 0.7569721115537849,
+          "f1-score": 0.6713780918727915,
+          "support": 251.0
+        },
+        "accuracy": 0.7518518518518519,
+        "macro avg": {
+          "precision": 0.740805352153299,
+          "recall": 0.7551201835647513,
+          "f1-score": 0.7434262330318488,
+          "support": 1080.0
+        },
+        "weighted avg": {
+          "precision": 0.7672346439926527,
+          "recall": 0.7518518518518519,
+          "f1-score": 0.755336237591279,
+          "support": 1080.0
+        }
+      }
+    }
+  },
+  "review": {
+    "T_CAT": 0.6,
+    "T_URG": 0.5,
+    "auto_routed_pct": 90.0,
+    "sent_to_review_pct": 10.0,
+    "category_acc_auto": 0.977366255144033,
+    "category_acc_review": 0.9259259259259259,
+    "category_acc_all": 0.9722222222222222
+  },
+  "top_terms_category": {
+    "account": [
+      "two",
+      "account",
+      "shows",
+      "username",
+      "name",
+      "email"
+    ],
+    "billing": [
+      "refund",
+      "my",
+      "yet",
+      "bill",
+      "statement",
+      "copy"
+    ],
+    "product": [
+      "pro",
+      "can",
+      "with",
+      "plan",
+      "does",
+      "versions"
+    ],
+    "technical": [
+      "error",
+      "very",
+      "api",
+      "being",
+      "timeout",
+      "delivered"
+    ]
+  },
+  "top_terms_urgency": {
+    "high": [
+      "production",
+      "this",
+      "immediately",
+      "respond",
+      "is",
+      "repots"
+    ],
+    "low": [
+      "just",
+      "no",
+      "rush",
+      "all",
+      "curious",
+      "woud"
+    ],
+    "medium": [
+      "it",
+      "regars",
+      "would",
+      "quick",
+      "appreciate",
+      "look"
+    ]
+  },
+  "samples": [
+    {
+      "ticket": "Hi team, I was charged twice for my invoice and this is urgent. Thanks",
+      "category": "billing",
+      "category_confidence": 0.969,
+      "urgency": "high",
+      "urgency_confidence": 0.618,
+      "queue": "Billing & Payments Team",
+      "priority": "P1 - respond within 1 hour",
+      "needs_review": false
+    },
+    {
+      "ticket": "The API returns a timeout error and our whole team is blocked, need this fixed asap",
+      "category": "technical",
+      "category_confidence": 0.985,
+      "urgency": "high",
+      "urgency_confidence": 0.981,
+      "queue": "Technical Support Team",
+      "priority": "P1 - respond within 1 hour",
+      "needs_review": false
+    },
+    {
+      "ticket": "Just curious, is there an integration with Slack? No rush.",
+      "category": "product",
+      "category_confidence": 0.979,
+      "urgency": "low",
+      "urgency_confidence": 0.967,
+      "queue": "Product & Sales Team",
+      "priority": "P3 - respond within 48 hours",
+      "needs_review": false
+    },
+    {
+      "ticket": "I forgot my password and the reset email never arrives. Please look into it soon.",
+      "category": "account",
+      "category_confidence": 0.979,
+      "urgency": "medium",
+      "urgency_confidence": 0.877,
+      "queue": "Account Services Team",
+      "priority": "P2 - respond within 8 hours",
+      "needs_review": false
+    },
+    {
+      "ticket": "hello my thing is broken",
+      "category": "account",
+      "category_confidence": 0.579,
+      "urgency": "medium",
+      "urgency_confidence": 0.686,
+      "queue": "Manual review",
+      "priority": "P2 - respond within 8 hours",
+      "needs_review": true
+    }
+  ]
+}
